@@ -8,7 +8,7 @@ class RFCHTMLParser(HTMLParser):
 
     def __init__(self, *, convert_charrefs: bool = ...) -> None:
         self.zips: Set[str] = set()
-        self.data_ultima_extracao: Union[datetime, None] = datetime.min
+        self.data_ultima_extracao: datetime = datetime.min
         super().__init__(convert_charrefs=convert_charrefs)
 
     def handle_starttag(self, tag: str, attrs) -> None:
